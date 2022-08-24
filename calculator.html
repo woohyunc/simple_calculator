@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+<title>20160319</title>
+
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			
+			<div class="navbar-header">
+					<a class="navbar-brand" href="file:///Users/daniel/Desktop/HTML/website.html">Text</a>
+			</div>
+			
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="file:///Users/daniel/Desktop/HTML/20160326.html#">Text</a></li>
+				<li><a href="file:///Users/daniel/Desktop/HTML/calculator.html">CALCULATOR</a></li>
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-scissors"></span> Edit</a></li>
+			</ul>
+		
+		</div>
+	
+	</nav>
+
+
+
+
+<em><h3 id="hello">Simple Calculator</h3></em>
+<input style="border: solid black 5px" id="input" type="text">
+<br>
+<br>
+
+<fieldset style="margin:0px,0px,0px,50px">
+<table border="1" style="border: solid black 5px;margin:0px,0px,0px,50px">
+<tbody>
+<tr>
+<td><button type="button" onclick='inputNumber(1)'>1</button></td>
+<td><button type="button" onclick='inputNumber(2)'>2</button></td>
+<td><button type="button" onclick='inputNumber(3)'>3</button></td>
+<td><button type="button" onclick="inputNumber('+')">+</button></td>
+<td><button type="button" onclick="inputNumber('*')">*</button></td>
+</tr>
+<tr>
+<td><button type="button" onclick='inputNumber(4)'>4</button></td>
+<td><button type="button" onclick='inputNumber(5)'>5</button></td>
+<td><button type="button" onclick='inputNumber(6)'>6</button></td>
+<td><button type="button" onclick="inputNumber('-')">-</button></td>
+<td><button type="button" onclick="inputNumber('/')">/</button></td>
+</tr>
+<source src="https//" type="">
+<tr>
+<td><button type="button" onclick='inputNumber(7)'>7</button></td>
+<td><button type="button" onclick='inputNumber(8)'>8</button></td>
+<td><button type="button" onclick='inputNumber(9)'>9</button></td>
+<td><button type="button" onclick='calculate()'>=</button></td>
+<td><button type="button" onclick='square()'>Square</button></td>
+</tr>
+<tr>
+<td><button type="button" onclick='inputNumber(0)'>0</button></td>
+<td><button type="button" onclick="inputNumber('.')">.</button></td>
+<td><button type="button" onclick='clearrr()'>C</button></td>
+<td><button type="button" onclick='rt()'>Root</button></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</fieldset>
+
+
+</body>
+
+<script>
+function inputNumber(x){
+//var p=0;
+//p=document.getElementById('input');
+//document.getElementById('input').value= p*10+x;
+document.getElementById('input').value +=x;
+
+}
+function calculate(){
+document.getElementById("input").value = eval(document.getElementById("input").value)
+}
+function clearrr(){
+document.getElementById("input").value="";
+}
+function hello(){
+document.getElementById("input").value="";
+}
+function square(){
+var k;
+if(document.getElementById("input").value='hello'){
+	document.getElementById("input").innerHTML='Goodbye!';
+}
+k=eval(document.getElementById("input").value);
+document.getElementById("input").value=k*k;
+}
+function rt(){
+var k;
+k=eval(document.getElementById("input").value);
+document.getElementById("input").value=Math.sqrt(k);
+}
+</script>
+
+</html>
